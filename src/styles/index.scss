@@ -1,3 +1,6 @@
+@import "../components/App/style.scss";
+@import "../components/DesktopHeader/style.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +14,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.navbar-nav{
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px){
+  .navbar-nav {
+    font-size: 22px;
+  }
+}
+@media (min-width: 994px) and (max-width: 1199px){
+  .navbar-nav {
+    font-size: 17px;
+  }
+}
+@media (max-width: 994px){
+  .navbar-nav {
+    font-size: 15px;
+  }
 }

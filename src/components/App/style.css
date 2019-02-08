@@ -1,0 +1,48 @@
+.app {
+  text-align: center;
+  right: 0; }
+  .app .opened {
+    width: 170vw;
+    float: right; }
+
+.menu-show {
+  position: relative;
+  left: -70vw;
+  transition: left .25s ease-in-out; }
+
+.banner {
+  display: block;
+  position: relative;
+  height: 100vh;
+  max-width: 100vh;
+  max-height: 1980px;
+  background-image: url(/static/media/mob_img.c7dcfaa7.jpg);
+  background-size: cover; }
+  .banner p {
+    position: absolute;
+    bottom: 10px;
+    padding: 20px 40px;
+    font-size: 35px;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8)); }
+
+.side-menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  background: aquamarine; }
+  .side-menu p, .side-menu a {
+    width: 100%;
+    padding: 20px 40px; }
+  .side-menu p {
+    border-bottom: 2px solid #fff; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
