@@ -23,26 +23,29 @@
     bottom: 10px;
     padding: 20px 40px;
     font-size: 35px;
-    color: #ffffff;
+    color: #0d2753;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8)); }
 
 .side-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   flex-flow: column wrap;
   right: 0;
   width: 70vw;
   height: 100vh;
-  background: aquamarine; }
+  background: #fff; }
   .side-menu p, .side-menu a {
     width: 100%;
-    padding: 20px 40px; }
+    padding: 20px 40px;
+    color: #ab9332; }
   .side-menu p {
-    border-bottom: 2px solid #fff; }
+    border-bottom: 2px solid #0d2753; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+section {
+  height: 280px;
+  display: flex;
+  align-items: center; }
+  section p {
+    width: 100%;
+    text-align: center; }

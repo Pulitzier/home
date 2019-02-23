@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import DesktopHeader from '../DesktopHeader/index';
+import AboutSection from '../AboutSection/index';
+import WorksSection from '../WorksSection/index';
+import ContactUsSection from "../ContactUsSection";
+import PortfolioSection from "../PortfolioSection";
 import bannerImage from "../../static/img.jpg";
 import mobImage from "../../static/mob_img.jpg";
 
@@ -24,7 +28,13 @@ class App extends Component {
   }
   
   toggleMobileMenu() {
-    let oldStateMenu = this.state.activeMobileMenu;
+    const oldStateMenu = this.state.activeMobileMenu;
+    const bodyNode = document.getElementsByTagName("body");
+    if (!oldStateMenu) {
+      bodyNode[0].style.overflow = "hidden";
+    } else {
+      bodyNode[0].style.overflow = "auto";
+    }
     this.setState({
       activeMobileMenu: !oldStateMenu,
     })
@@ -58,9 +68,9 @@ class App extends Component {
 						>
               <p>ИП Такушевич</p>
               <a href="#about">О Нас</a>
-              <a href="#about">Наши работа</a>
-              <a href="#about">Портфолио</a>
-              <a href="#about">Контакты</a>
+              <a href="#works">Наши работа</a>
+              <a href="#portfolio">Портфолио</a>
+              <a href="#contact-us">Контакты</a>
             </section> :
 						null
 				}
@@ -69,6 +79,10 @@ class App extends Component {
 					<div className="banner">
             <p>Проектирование и сопровождение проектов</p>
 					</div>
+          <AboutSection />
+          <WorksSection />
+          <PortfolioSection />
+          <ContactUsSection />
 				</div>
       </div>
     );
