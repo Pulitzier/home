@@ -4,6 +4,7 @@ import AboutSection from '../AboutSection/index';
 import WorksSection from '../WorksSection/index';
 import ContactUsSection from "../ContactUsSection";
 import PortfolioSection from "../PortfolioSection";
+import ClientsSection from "../ClientsSection";
 import bannerImage from "../../static/img.jpg";
 import mobImage from "../../static/mob_img.jpg";
 
@@ -67,9 +68,11 @@ class App extends Component {
 							className="side-menu"
 						>
               <p>ИП Такушевич</p>
+              <a href="/">Главная</a>
               <a href="#about">О Нас</a>
-              <a href="#works">Наши работа</a>
+              <a href="#works">Услуги</a>
               <a href="#portfolio">Портфолио</a>
+              <a href="#clients">Наши Заказчики</a>
               <a href="#contact-us">Контакты</a>
             </section> :
 						null
@@ -82,6 +85,7 @@ class App extends Component {
           <AboutSection />
           <WorksSection />
           <PortfolioSection />
+          <ClientsSection />
           <ContactUsSection />
 				</div>
       </div>

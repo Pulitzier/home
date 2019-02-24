@@ -1,0 +1,29 @@
+#about {
+  padding-top: 30px;
+  flex-flow: column wrap; }
+  #about p {
+    font-size: 18px;
+    padding: 10px; }
+  #about span.exclamation {
+    color: #0d2753;
+    font-size: 26px;
+    font-weight: bold; }
+  #about .about-item {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    font-size: 26px;
+    padding: 20px 10px;
+    font-family: Raleway, sans-serif; }
+    #about .about-item span {
+      color: #0d2753;
+      font-size: 50px;
+      padding: 10px;
+      border: 4px solid #0d2753;
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px; }
