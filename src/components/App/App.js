@@ -83,8 +83,6 @@ class App extends Component {
             <p>Проектирование и сопровождение проектов</p>
 					</div>
           <AboutSection />
-          <WorksSection />
-          <PortfolioSection />
           <ClientsSection />
           <ContactUsSection />
 				</div>
