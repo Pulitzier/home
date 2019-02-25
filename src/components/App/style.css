@@ -48,3 +48,11 @@ section {
   section p {
     width: 100%;
     text-align: center; }
+
+header:not(.brand-header) {
+  display: inline-block;
+  clear: both;
+  padding-top: 50px;
+  color: #ab9332;
+  font-size: 28px;
+  text-decoration: underline; }

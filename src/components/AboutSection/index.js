@@ -5,6 +5,7 @@ import { faCarSide, faBusinessTime, faHandshake, faHandHoldingUsd } from '@forta
 let About = (props) => {
 	return (
 		<section id="about">
+			<header>О Нас</header>
 			<p>
 				Опыт работы <span className="exclamation">более 15 лет</span> и более <span className="exclamation">140</span> качественно выполненных проектов
 			</p>

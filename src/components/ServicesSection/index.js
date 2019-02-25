@@ -3,6 +3,7 @@ import React from "react";
 let ServicesSection = (props) => {
 	return (
 		<section id="services">
+			<header>Услуги</header>
 			<p>Мы проектируем:</p>
 			<ul>
 				<li>Сети 10-0,4кВ</li>

@@ -3,7 +3,7 @@ import React from 'react';
 let ContactUsSection = (props) => {
 	return (
 		<section id="contact-us">
-			<p>Наши Контакты:</p>
+			<header>Наши Контакты</header>
 			<p>+375 (29) 364-02-64</p>
 			<a href="mailto:tak.ef@mail.ru">tak.ef@mail.ru</a>
 			<p>Режим работы:</p>

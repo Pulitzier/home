@@ -50,6 +50,14 @@ section {
     width: 100%;
     text-align: center; }
 
+header:not(.brand-header) {
+  display: inline-block;
+  clear: both;
+  padding-top: 50px;
+  color: #ab9332;
+  font-size: 28px;
+  text-decoration: underline; }
+
 .brand-header {
   background-color: #fff;
   min-height: 90px;
@@ -163,32 +171,34 @@ section {
       justify-content: center;
       margin-bottom: 10px; }
 
-#slides {
-  position: relative;
-  height: 300px;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  width: 100%; }
-  #slides .slide {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s; }
-    #slides .slide.showing {
-      opacity: 1;
-      z-index: 2; }
-    #slides .slide img {
-      filter: grayscale(100%); }
+#clients {
+  display: block; }
+  #clients #slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 100%; }
+    #clients #slides .slide {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: opacity 1s;
+      -moz-transition: opacity 1s;
+      -o-transition: opacity 1s;
+      transition: opacity 1s; }
+      #clients #slides .slide.showing {
+        opacity: 1;
+        z-index: 2; }
+      #clients #slides .slide img {
+        filter: grayscale(100%); }
 
 #contact-us {
   display: flex;

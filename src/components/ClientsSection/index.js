@@ -23,6 +23,7 @@ export default class Clients extends Component {
 	render() {
 		return (
 			<section id="clients">
+				<header>Наши клиенты</header>
 				<ul id="slides">
 					<li className="slide showing">
 						<img src={akd} />
