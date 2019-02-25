@@ -1,0 +1,12 @@
+@import "../../styles/_variables.scss";
+
+#contact-us {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: $base-background-color;
+  background-color: $secondary-text-color;
+  padding: 50px 10px;
+  font-size: 20px;
+}

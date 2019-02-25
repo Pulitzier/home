@@ -190,6 +190,16 @@ section {
     #slides .slide img {
       filter: grayscale(100%); }
 
+#contact-us {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #0d2753;
+  padding: 50px 10px;
+  font-size: 20px; }
+
 body {
   margin: 0;
   padding: 0;
