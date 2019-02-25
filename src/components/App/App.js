@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DesktopHeader from '../DesktopHeader/index';
 import AboutSection from '../AboutSection/index';
-import WorksSection from '../WorksSection/index';
+import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import PortfolioSection from "../PortfolioSection";
 import ClientsSection from "../ClientsSection";
@@ -70,7 +70,7 @@ class App extends Component {
               <p>ИП Такушевич</p>
               <a href="/">Главная</a>
               <a href="#about">О Нас</a>
-              <a href="#works">Услуги</a>
+              <a href="#services">Услуги</a>
               <a href="#portfolio">Портфолио</a>
               <a href="#clients">Наши Заказчики</a>
               <a href="#contact-us">Контакты</a>
@@ -83,6 +83,7 @@ class App extends Component {
             <p>Проектирование и сопровождение проектов</p>
 					</div>
           <AboutSection />
+          <ServicesSection />
           <ClientsSection />
           <ContactUsSection />
 				</div>

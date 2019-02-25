@@ -1,0 +1,13 @@
+#services {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+  ul {
+    list-style-type: decimal;
+    text-align: left;
+  }
+}
