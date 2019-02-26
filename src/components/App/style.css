@@ -11,16 +11,17 @@
   transition: left .25s ease-in-out; }
 
 .banner {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100vh;
-  max-width: 100vh;
+  max-width: 100vw;
   max-height: 1980px;
   background-image: url(/static/media/mob_img.c7dcfaa7.jpg);
   background-size: cover; }
   .banner p {
     position: absolute;
-    bottom: 10px;
     padding: 20px 40px;
     font-size: 35px;
     color: #0d2753;
@@ -38,7 +39,7 @@
   .side-menu p, .side-menu a {
     width: 100%;
     padding: 20px 40px;
-    color: #ab9332; }
+    color: #0d2753; }
   .side-menu p {
     border-bottom: 2px solid #0d2753; }
 
@@ -49,10 +50,14 @@ section {
     width: 100%;
     text-align: center; }
 
-header:not(.brand-header) {
+header:not(.brand-header-wrapper) {
   display: inline-block;
   clear: both;
   padding-top: 50px;
   color: #ab9332;
   font-size: 28px;
   text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .banner p {
+    bottom: 10px; } }

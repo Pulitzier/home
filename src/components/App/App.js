@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import DesktopHeader from '../DesktopHeader/index';
+import DesktopHeader from '../Header/index';
 import AboutSection from '../AboutSection/index';
 import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
-import PortfolioSection from "../PortfolioSection";
 import ClientsSection from "../ClientsSection";
 import bannerImage from "../../static/img.jpg";
 import mobImage from "../../static/mob_img.jpg";
@@ -12,8 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
-    this.renderHeader = this.renderHeader.bind(this);
     this.state = {
+      scrollStart: false,
       mobileView: false,
       activeMobileMenu: false,
     };
@@ -26,6 +25,18 @@ class App extends Component {
         mobileView: true
       })
     }
+    
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset !== 0) {
+        this.setState({
+          scrollStart: true
+        })
+      } else {
+        this.setState({
+          scrollStart: false
+        })
+      }
+    })
   }
   
   toggleMobileMenu() {
@@ -41,25 +52,9 @@ class App extends Component {
     })
   }
   
-  renderHeader(width) {
-    let { activeMobileMenu } = this.state;
-    let isMobileWidth = (width <= 768);
-    if (isMobileWidth) {
-      return (
-        <DesktopHeader
-          mobileView={isMobileWidth}
-          activeMobileMenu={activeMobileMenu}
-          toggleMenu={this.toggleMobileMenu}
-        />
-      )
-    } else {
-      return (<div>Restore Settings</div>)
-    }
-  }
-  
   render() {
     let windowWidth = window.innerWidth;
-    let { activeMobileMenu } = this.state;
+    let { activeMobileMenu, scrollStart } = this.state;
     return (
       <div className={"app " + (activeMobileMenu ? "opened" : "")}>
 				{
@@ -77,7 +72,11 @@ class App extends Component {
 						null
 				}
 				<div className={activeMobileMenu ? "menu-show" : ""}>
-					{this.renderHeader(windowWidth)}
+          <DesktopHeader
+            scrollStart={scrollStart}
+            activeMobileMenu={activeMobileMenu}
+            toggleMenu={this.toggleMobileMenu}
+          />
 					<div className="banner">
             <p>Проектирование и сопровождение проектов</p>
 					</div>
