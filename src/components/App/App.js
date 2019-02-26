@@ -4,6 +4,7 @@ import AboutSection from '../AboutSection/index';
 import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import ClientsSection from "../ClientsSection";
+import BannerSection from "../BannerSection";
 import bannerImage from "../../static/img.jpg";
 import mobImage from "../../static/mob_img.jpg";
 
@@ -77,9 +78,7 @@ class App extends Component {
             activeMobileMenu={activeMobileMenu}
             toggleMenu={this.toggleMobileMenu}
           />
-					<div className="banner">
-            <p>Проектирование и сопровождение проектов</p>
-					</div>
+					<BannerSection />
           <AboutSection />
           <ServicesSection />
           <ClientsSection />
