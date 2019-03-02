@@ -7,11 +7,11 @@ let About = (props) => {
 		<section id="about">
 			<header>О Нас</header>
 			<p>
-				Опыт работы <span className="exclamation">более 15 лет</span> и более <span className="exclamation">140</span> качественно выполненных проектов
+				Опыт работы около <span className="exclamation">20 лет</span> и около <span className="exclamation">500</span> выполненных проектов
 			</p>
 			<p className="about-item">
 				<span>
-					<FontAwesomeIcon icon={faCarSide} />
+						<FontAwesomeIcon icon={faCarSide} />
 				</span>
 				Выезд на объект
 			</p>
