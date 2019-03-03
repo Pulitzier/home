@@ -5,6 +5,7 @@ import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import ClientsSection from "../ClientsSection";
 import BannerSection from "../BannerSection";
+import MobileMenu from "../MobileMenu";
 
 class App extends Component {
   constructor(props) {
@@ -44,16 +45,7 @@ class App extends Component {
       <div className={"app " + (activeMobileMenu ? "opened" : "")}>
 				{
 					activeMobileMenu ?
-						<section
-							className="side-menu"
-						>
-              <p>ИП Такушевич</p>
-              <a href="/">Главная</a>
-              <a href="#about">О Нас</a>
-              <a href="#services">Услуги</a>
-              <a href="#clients">Наши Заказчики</a>
-              <a href="#contact-us">Контакты</a>
-            </section> :
+						<MobileMenu /> :
 						null
 				}
 				<div className={activeMobileMenu ? "menu-show" : ""}>
