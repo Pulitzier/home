@@ -5,7 +5,7 @@ import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import ClientsSection from "../ClientsSection";
 import BannerSection from "../BannerSection";
-import MobileMenu from "../MobileMenu";
+import NavMenu from "../NavMenu";
 
 class App extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class App extends Component {
       <div className={"app " + (activeMobileMenu ? "opened" : "")}>
 				{
 					activeMobileMenu ?
-						<MobileMenu /> :
+						<NavMenu /> :
 						null
 				}
 				<div className={activeMobileMenu ? "menu-show" : ""}>

@@ -1,11 +1,10 @@
 import React from 'react';
 
-let MobileMenu = (props) => {
+let NavMenu = (props) => {
 	return (
 		<section
 			className="side-menu"
 		>
-			<p>ИП Такушевич</p>
 			<a href="/">Главная</a>
 			<a href="#about">О Нас</a>
 			<a href="#services">Услуги</a>
@@ -15,4 +14,4 @@ let MobileMenu = (props) => {
 	)
 };
 
-export default MobileMenu;
+export default NavMenu;

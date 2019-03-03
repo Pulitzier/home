@@ -1,4 +1,5 @@
 import React from 'react';
+import NavMenu from "../NavMenu";
 
 const Header = ({ toggleMenu, activeMobileMenu }) => {
  return (
@@ -12,6 +13,7 @@ const Header = ({ toggleMenu, activeMobileMenu }) => {
       >
         ИП Такушевич
       </a>
+      <NavMenu />
       <button
         className={"btn-toggle-control " + (activeMobileMenu ? "toggled-menu" : '')}
         onClick={toggleMenu}
