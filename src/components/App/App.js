@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DesktopHeader from '../Header/index';
+import Header from '../Header/index';
 import AboutSection from '../AboutSection/index';
 import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
@@ -57,7 +57,7 @@ class App extends Component {
 						null
 				}
 				<div className={activeMobileMenu ? "menu-show" : ""}>
-          <DesktopHeader
+          <Header
             activeMobileMenu={activeMobileMenu}
             toggleMenu={this.toggleMobileMenu}
           />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DesktopHeader = ({ toggleMenu, activeMobileMenu }) => {
+const Header = ({ toggleMenu, activeMobileMenu }) => {
  return (
   <header className="brand-header-wrapper">
     <div className="brand-header">
@@ -28,4 +28,4 @@ const DesktopHeader = ({ toggleMenu, activeMobileMenu }) => {
   </header>
 )};
 
-export default DesktopHeader;
+export default Header;
