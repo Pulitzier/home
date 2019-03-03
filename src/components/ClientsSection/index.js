@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import akd from '../../static/akd-small.jpg';
-import be from '../../static/be-small.jpg';
-import bsb from '../../static/bsb-small.jpg';
-import gsb from '../../static/gsb-small.jpg';
-import sek from '../../static/sek-small.png';
+import akd from '../../static/media/akd-small.jpg';
+import be from '../../static/media/be-small.jpg';
+import bsb from '../../static/media/bsb-small.jpg';
+import gsb from '../../static/media/gsb-small.jpg';
+import sek from '../../static/media/sek-small.png';
 
 export default class Clients extends Component {
 	componentDidMount() {

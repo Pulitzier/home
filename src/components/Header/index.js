@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 
 export default class DesktopHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
   
   render() {
-    const { toggleMenu, activeMobileMenu, scrollStart } = this.props;
-  
-  
+    const { toggleMenu, activeMobileMenu } = this.props;
+   
     return (
-      <header className={"brand-header-wrapper " + (scrollStart ? 'scrolled' : '')}>
+      <header className="brand-header-wrapper">
         <div className="brand-header">
           <a
             href="/"

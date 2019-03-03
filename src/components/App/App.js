@@ -5,15 +5,12 @@ import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import ClientsSection from "../ClientsSection";
 import BannerSection from "../BannerSection";
-import bannerImage from "../../static/img.jpg";
-import mobImage from "../../static/mob_img.jpg";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.state = {
-      scrollStart: false,
       mobileView: false,
       activeMobileMenu: false,
     };
@@ -26,18 +23,6 @@ class App extends Component {
         mobileView: true
       })
     }
-    
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset !== 0) {
-        this.setState({
-          scrollStart: true
-        })
-      } else {
-        this.setState({
-          scrollStart: false
-        })
-      }
-    })
   }
   
   toggleMobileMenu() {
@@ -54,8 +39,7 @@ class App extends Component {
   }
   
   render() {
-    let windowWidth = window.innerWidth;
-    let { activeMobileMenu, scrollStart } = this.state;
+    let { activeMobileMenu } = this.state;
     return (
       <div className={"app " + (activeMobileMenu ? "opened" : "")}>
 				{
@@ -74,7 +58,6 @@ class App extends Component {
 				}
 				<div className={activeMobileMenu ? "menu-show" : ""}>
           <DesktopHeader
-            scrollStart={scrollStart}
             activeMobileMenu={activeMobileMenu}
             toggleMenu={this.toggleMobileMenu}
           />
