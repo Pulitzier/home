@@ -1,35 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class DesktopHeader extends Component {
-  
-  render() {
-    const { toggleMenu, activeMobileMenu } = this.props;
-   
-    return (
-      <header className="brand-header-wrapper">
-        <div className="brand-header">
-          <a
-            href="/"
-            target="_self"
-            rel="noopener noreferrer"
-            className="brand-headline"
-          >
-            ИП Такушевич
-          </a>
-          <button
-            className={"btn-toggle-control " + (activeMobileMenu ? "toggled-menu" : '')}
-            onClick={toggleMenu}
-          >
-            <div className="hamb-button">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <p>Меню</p>
-          </button>
+const DesktopHeader = ({ toggleMenu, activeMobileMenu }) => {
+ return (
+  <header className="brand-header-wrapper">
+    <div className="brand-header">
+      <a
+        href="/"
+        target="_self"
+        rel="noopener noreferrer"
+        className="brand-headline"
+      >
+        ИП Такушевич
+      </a>
+      <button
+        className={"btn-toggle-control " + (activeMobileMenu ? "toggled-menu" : '')}
+        onClick={toggleMenu}
+      >
+        <div className="hamb-button">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </header>
-    );
-  }
-};
+        <p>Меню</p>
+      </button>
+    </div>
+  </header>
+)};
+
+export default DesktopHeader;
