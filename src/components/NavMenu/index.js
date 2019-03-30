@@ -1,10 +1,9 @@
 import React from 'react';
+import './style.css';
 
-let NavMenu = (props) => {
+const NavMenu = (props) => {
 	return (
-		<section
-			className="side-menu"
-		>
+		<section className="side-menu" >
 			<a href="/">Главная</a>
 			<a href="#about">О Нас</a>
 			<a href="#services">Услуги</a>

@@ -3,9 +3,10 @@
 .side-menu {
   right: 0;
   background: $base-background-color;
+  display: block;
   p, a {
     width: 100%;
-    padding: 20px 40px;
+    padding: 14px;
     color: $secondary-text-color;
   }
   p {
