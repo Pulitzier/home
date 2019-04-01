@@ -1,0 +1,38 @@
+@import "../../static/variables";
+
+.app {
+  text-align: center;
+  right: 0;
+  .opened {
+    width: 170vw;
+    float: right;
+  }
+}
+
+.menu-show {
+  position: relative;
+  left: -70vw;
+  transition: left .25s ease-in-out;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+header:not(.brand-header-wrapper) {
+  display: inline-block;
+  clear: both;
+  padding-top: 50px;
+  color: $base-color;
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .banner p { bottom: 10px; }
+}

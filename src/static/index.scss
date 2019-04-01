@@ -1,0 +1,38 @@
+@import "../components/App/style.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.navbar-nav{
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px){
+  .navbar-nav {
+    font-size: 22px;
+  }
+}
+@media (min-width: 994px) and (max-width: 1199px){
+  .navbar-nav {
+    font-size: 17px;
+  }
+}
+@media (max-width: 994px){
+  .navbar-nav {
+    font-size: 15px;
+  }
+}

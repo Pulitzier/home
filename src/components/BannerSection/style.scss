@@ -1,0 +1,88 @@
+@import "../../static/variables";
+
+.banner-wrapper {
+  position: relative;
+  height: 80vh;
+  max-width: 100vw;
+  max-height: 1980px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: '';
+    filter: brightness(0.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    background-image: url("../../static/media/main.jpg");
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .banner {
+    width: 100%;
+    max-width: 55vw;
+    margin: auto;
+    padding: 60px 40px;
+    display: block;
+    position: relative;
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+
+  .click-me-down,  .click-me-down:visited {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    bottom: 20px;
+    position: absolute;
+    color: $base-background-color;
+    background-color: transparent;
+    svg {
+      float: none;
+      clear: both;
+      display: block;
+      &:nth-child(1) {
+        font-size: 10px;
+        transform: scale(1);
+        transition: transform 0.05s ease-in-out, margin 0.05s ease-in-out;
+        margin: 4px auto;
+      }
+      &:nth-child(2) {
+        font-size: 20px;
+        transform: scale(1);
+        transition: transform 0.15s ease-in-out, margin 0.15s ease-in-out;
+        margin: -10px auto;
+      }
+      &:nth-child(3) {
+        font-size: 30px;
+        transform: scale(1);
+        transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
+        margin: -14px auto;
+      }
+    }
+    &.entered {
+      svg:nth-child(1) {
+        transform: scale(1.5);
+        transition: transform 0.05s ease-in-out, margin 0.05s ease-in-out;
+        margin: 5px auto;
+      }
+      svg:nth-child(2) {
+        transform: scale(1.5);
+        transition: transform 0.15s ease-in-out, margin 0.15s ease-in-out;
+        margin: -8px auto;
+      }
+      svg:nth-child(3) {
+        transform: scale(1.5);
+        transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
+        margin: -10px auto;
+      }
+    }
+    &:hover, &:active {
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}
