@@ -1,8 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCarSide, faBusinessTime, faHandshake, faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons';
+import './style.css';
 
-let About = (props) => {
+const About = (props) => {
 	return (
 		<section id="about">
 			<header>О Нас</header>

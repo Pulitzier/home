@@ -4,14 +4,13 @@ import be from '../../static/media/be-small.jpg';
 import bsb from '../../static/media/bsb-small.jpg';
 import gsb from '../../static/media/gsb-small.jpg';
 import sek from '../../static/media/sek-small.png';
+import './style.css';
 
 export default class Clients extends Component {
 	componentDidMount() {
-		let slides = document.querySelectorAll('#slides .slide');
+		const slides = document.querySelectorAll('#slides .slide');
+		const slideInterval = setInterval(nextSlide,2000);
 		let currentSlide = 0;
-		let slideInterval = setInterval(nextSlide,2000);
-		
-		console.log(slides);
 		
 		function nextSlide() {
 			slides[currentSlide].className = 'slide';

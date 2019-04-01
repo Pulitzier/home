@@ -1,5 +1,6 @@
 import React from 'react';
 import NavMenu from "../NavMenu";
+import './style.css';
 
 const Header = ({ toggleMenu, activeMobileMenu }) => {
  return (

@@ -2,10 +2,12 @@
 
 #about {
   padding-top: 30px;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+  header { width: 100%; }
   p {
     font-size: 18px;
     padding: 10px;
+    &:not(.about-item) { width: 100% }
   }
   span.exclamation {
     color: $secondary-text-color;
@@ -13,11 +15,13 @@
     font-weight: bold;
   }
   .about-item {
+    flex: 1;
     display: flex;
     align-items: center;
     flex-flow: column wrap;
-    font-size: 26px;
     padding: 20px 10px;
+    width: auto;
+    font-size: 26px;
     font-family: Raleway, sans-serif;
     span {
       color: $secondary-text-color;
@@ -33,4 +37,8 @@
       margin-bottom: 10px;
     }
   }
+}
+
+@media (max-width: 768px) {
+  #about { flex-flow: column wrap; }
 }
