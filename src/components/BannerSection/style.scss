@@ -2,7 +2,7 @@
 
 .banner-wrapper {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   max-width: 100vw;
   max-height: 1980px;
   display: flex;
@@ -10,25 +10,26 @@
   justify-content: center;
   &:before {
     content: '';
-    filter: brightness(0.8);
+    filter: brightness(0.6);
     width: 100%;
     height: 100%;
     left: 0;
     position: absolute;
-    background-image: url("../../static/media/main.jpg");
+    background-image: url("../../static/media/american-public-powe.jpg");
     background-size: cover;
     background-position: bottom;
   }
 
   .banner {
     width: 100%;
-    max-width: 55vw;
+    max-width: 90vw;
     margin: auto;
     padding: 60px 40px;
     display: block;
     position: relative;
+    color: $base-font-color;
     h1 {
-      text-transform: uppercase;
+      font-size: 72px;
     }
   }
 
@@ -38,43 +39,22 @@
     border: 0;
     bottom: 20px;
     position: absolute;
-    color: $base-background-color;
+    color: $base-font-color;
     background-color: transparent;
     svg {
+      fill:#ffffff;
+      width: 38.417px;
+      height: 18.592px;
       float: none;
       clear: both;
       display: block;
-      &:nth-child(1) {
-        font-size: 10px;
-        transform: scale(1);
-        transition: transform 0.05s ease-in-out, margin 0.05s ease-in-out;
-        margin: 4px auto;
-      }
-      &:nth-child(2) {
-        font-size: 20px;
-        transform: scale(1);
-        transition: transform 0.15s ease-in-out, margin 0.15s ease-in-out;
-        margin: -10px auto;
-      }
-      &:nth-child(3) {
-        font-size: 30px;
-        transform: scale(1);
-        transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
-        margin: -14px auto;
-      }
+      font-size: 30px;
+      transform: scale(1);
+      transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
+      margin: -14px auto;
     }
     &.entered {
-      svg:nth-child(1) {
-        transform: scale(1.5);
-        transition: transform 0.05s ease-in-out, margin 0.05s ease-in-out;
-        margin: 5px auto;
-      }
-      svg:nth-child(2) {
-        transform: scale(1.5);
-        transition: transform 0.15s ease-in-out, margin 0.15s ease-in-out;
-        margin: -8px auto;
-      }
-      svg:nth-child(3) {
+      svg {
         transform: scale(1.5);
         transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
         margin: -10px auto;
