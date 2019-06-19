@@ -19,9 +19,18 @@
     justify-content: space-between;
     font-size: 20px;
     z-index: 1;
+    p, a {
+      font-size: 13px;
+      font-weight: 700;
+      color: $base-font-color;
+    }
+    p {
+      margin: 0;
+      padding: 14px;
+    }
     a {
       text-decoration: none;
-      color: $base-font-color;
+      text-transform: uppercase;
     }
   }
 }
