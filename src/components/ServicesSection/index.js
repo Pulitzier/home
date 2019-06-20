@@ -1,11 +1,12 @@
 import React from "react";
 import './style.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBusinessTime, faCarSide, faHandHoldingUsd, faHandshake} from "@fortawesome/free-solid-svg-icons";
 
 let ServicesSection = (props) => {
 	return (
 		<section id="services">
-			<header>Услуги</header>
-			<p>Мы проектируем:</p>
+      <p>Мы проектируем:</p>
 			<ul>
 				<li>Сети 10-0,4кВ</li>
 				<li>ТП 10/0,4кВ</li>

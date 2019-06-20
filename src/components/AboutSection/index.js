@@ -6,34 +6,15 @@ import './style.css';
 const About = (props) => {
 	return (
 		<section id="about">
-			<header>О Нас</header>
-			<p>
-				Опыт работы около <span className="exclamation">20 лет</span> и около <span className="exclamation">500</span> выполненных проектов
-			</p>
-			<p className="about-item">
-				<span>
-						<FontAwesomeIcon icon={faCarSide} />
-				</span>
-				Выезд на объект
-			</p>
-			<p className="about-item">
-				<span>
-					<FontAwesomeIcon icon={faBusinessTime} />
-				</span>
-				Соблюдение сроков
-			</p>
-			<p className="about-item">
-				<span>
-					<FontAwesomeIcon icon={faHandshake} />
-				</span>
-				Согласовнаие проектов
-			</p>
-			<p className="about-item">
-				<span>
-					<FontAwesomeIcon icon={faHandHoldingUsd} />
-				</span>
-				Безналичный расчет
-			</p>
+      <div className="header">
+        <header>О Нас</header>
+        <span className="header-underline"></span>
+      </div>
+      <div className="about-description">
+        <p>
+          Проектную документацию для Вас разрабатывают грамотные специалисты с опытом работы более 20 лет. Мы имеем аттестат соответствия №0000268-ПР на право осуществления разработки разделов проектной документации для объектов строительства первого-четвёртого классов сложности.
+        </p>
+      </div>
 			<p>
 				Имеем право работать с объектами <span className="exclamation">1-4 классов сложности</span>.
 			</p>

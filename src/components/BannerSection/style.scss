@@ -22,7 +22,7 @@
 
   .banner {
     width: 100%;
-    max-width: 90vw;
+    max-width: 1046px;
     margin: auto;
     padding: 60px 40px;
     display: block;
@@ -51,16 +51,7 @@
       clear: both;
       display: block;
       font-size: 30px;
-      transform: scale(1);
-      transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
       margin: -14px auto;
-    }
-    &.entered {
-      svg {
-        transform: scale(1.5);
-        transition: transform 0.28s ease-in-out, margin 0.28s ease-in-out;
-        margin: -10px auto;
-      }
     }
     &:hover, &:active {
       background-color: transparent;
@@ -70,6 +61,6 @@
 }
 
 @keyframes from-top-to-down {
-  0%, 100% { bottom: 10px; }
-  40%, 60% { bottom: 2px; }
+  0%, 100% { bottom: 26px; }
+  40%, 60% { bottom: 10px; }
 }
