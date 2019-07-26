@@ -1,14 +1,40 @@
+@import "../../static/variables";
+
 #services {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
+  background-color: $section-background-color;
+
+  & > div {
+    max-width: 1140px;
+    margin: 75px auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .self-confident-client-img {
+    width: 500px;
+    margin-right: 40px;
+    height: 100%;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      background-color: $line-background-color;
+      top: 50px;
+      content: '';
+      display: block;
+      height: 3px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,0);
+      width: 50px;
+    }
+  }
+
   p {
     text-align: center;
     font-size: 20px;
-  }
-  ul {
-    max-width: 650px;
-    list-style-type: decimal;
-    text-align: left;
+    margin-bottom: 20px;
   }
 }
