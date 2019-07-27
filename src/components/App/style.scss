@@ -26,9 +26,10 @@ header {
   transition: left .25s ease-in-out;
 }
 
-section {
+section:not(.side-menu) {
   display: flex;
   align-items: center;
+  padding: 75px 0;
   p {
     width: 100%;
     text-align: center;

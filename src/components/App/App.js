@@ -8,6 +8,7 @@ import BannerSection from "../BannerSection";
 import NavMenu from "../NavMenu";
 import WhatWeDo from '../WhatWeDoSection';
 import OurBenefits from '../OurBenefitsSection';
+import HowWeDoItSection from '../HowWeDoItSection';
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class App extends Component {
           <WhatWeDo />
           <OurBenefits />
           <ServicesSection />
+          <HowWeDoItSection />
           <ClientsSection />
           <ContactUsSection />
 				</div>
