@@ -10,6 +10,7 @@ import WhatWeDo from '../WhatWeDoSection';
 import OurBenefits from '../OurBenefitsSection';
 import HowWeDoItSection from '../HowWeDoItSection';
 import ProjectStructureSection from '../ProjectStructureSection';
+import FooterSection from '../FooterSection';
 
 class App extends Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class App extends Component {
           <ProjectStructureSection />
           <PartnersSection />
           <ContactUsSection />
+          <FooterSection />
 				</div>
       </div>
     );
