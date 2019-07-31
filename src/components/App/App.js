@@ -3,7 +3,7 @@ import Header from '../Header/index';
 import AboutSection from '../AboutSection/index';
 import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
-import ClientsSection from "../ClientsSection";
+import PartnersSection from "../PartnersSection";
 import BannerSection from "../BannerSection";
 import NavMenu from "../NavMenu";
 import WhatWeDo from '../WhatWeDoSection';
@@ -64,7 +64,7 @@ class App extends Component {
           <ServicesSection />
           <HowWeDoItSection />
           <ProjectStructureSection />
-          <ClientsSection />
+          <PartnersSection />
           <ContactUsSection />
 				</div>
       </div>
