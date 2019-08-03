@@ -5,8 +5,46 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  color: $base-background-color;
-  background-color: $secondary-text-color;
-  padding: 50px 10px;
+  color: $secondary-font-color;
   font-size: 20px;
+
+  header {
+    font-size: 42px;
+    line-height: 1.23;
+    &:first-of-type {
+      margin-bottom: 75px;
+    }
+    &:last-of-type {
+      padding: 40px 0;
+    }
+  }
+
+  p, a, span {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  svg {
+    fill: $base-font-color;
+    margin: 0 auto;
+  }
+  .social-net-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+
+    a {
+      border-radius: 50%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+      &.facebook { background-color: $facebook-back }
+      &.vk { background-color: $vk-back }
+      &.instagram { background-color: $instagram-back }
+      &.telegram { background-color: $telegram-back }
+    }
+  }
 }
