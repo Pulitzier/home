@@ -3,10 +3,7 @@ import './style.scss';
 
 const HowWeDoItSection = () => (
     <section id="how-we-do-it">
-      <div className="header">
-        <header>Как мы работаем</header>
-        <span className="header-underline"></span>
-      </div>
+      <header>Как мы работаем</header>
       <div className="description-section">
         <div className="description-section-item">
           <div className="description-section-item-number">

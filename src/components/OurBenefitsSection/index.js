@@ -10,10 +10,7 @@ import stamp from '../../static/media/stamp.svg';
 let OurBenefitsSection = (props) => {
 	return (
 		<section id="portfolio">
-      <div className="header">
-        <header>Преимущества работы с нами</header>
-        <span className="header-underline"></span>
-      </div>
+      <header>Преимущества работы с нами</header>
       <h3>Закажите проект у нас и мы гарантируем Вам</h3>
       <div className="portfolio-item-row">
         <img alt="Выезд на объект" src={car} />

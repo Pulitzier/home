@@ -3,6 +3,9 @@
 #project-structure {
   flex-flow: column nowrap;
   background: $section-background-color;
+  header {
+    margin-bottom: 50px;
+  }
 
   .main-project-structure {
     padding: 0;
@@ -11,7 +14,7 @@
 
     & > li {
       overflow: hidden;
-      ul { padding: 0 }
+      ul { padding-left: 20px; }
     }
 
     .project-structure-item {
@@ -75,7 +78,7 @@
       p { margin-bottom: 0 }
       li {
         list-style-type: disc;
-        list-style-position: inside;
+        list-style-position: outside;
       }
     }
   }

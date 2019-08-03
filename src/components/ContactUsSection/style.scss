@@ -6,21 +6,32 @@
   justify-content: center;
   align-items: center;
   color: $base-font-color;
-  background: url("../../static/media/project-back.jpg") no-repeat center center;
-  background-size: cover;
   font-size: 20px;
   padding: 100px 0;
+  position: relative;
+  &:before {
+    content: '';
+    filter: brightness(0.6);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    background: url("../../static/media/project-back.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
 
   header { font-weight: 700; }
 
   header, p {
-    max-width: 600px;
     color: $base-font-color;
   }
 
   p {
     font-size: 24px;
     line-height: 1.5;
+    max-width: 600px;
   }
 
   form {
@@ -28,6 +39,8 @@
     input {
       color: $submit-font-color;
       border: none;
+      font-size: 18px;
+      text-align: center;
       border-radius: 50px;
       padding: 20px 30px;
       margin-right: 20px;
@@ -35,12 +48,10 @@
     button {
       color: $submit-font-color;
       background-color: $submit-back-color;
-      border-radius: 30px;
-      font-size: 16px;
+      border-radius: 50px;
+      font-size: 18px;
       font-weight: 700;
-      padding-left: 40px;
-      padding-right: 40px;
-      height: 56px;
+      padding: 20px 40px;
       border: none;
     }
   }

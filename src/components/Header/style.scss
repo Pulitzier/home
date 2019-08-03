@@ -7,7 +7,7 @@
   position: fixed;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
   background-color: $base-background-color;
   .brand-header {
     min-height: 70px;
@@ -20,9 +20,10 @@
     font-size: 20px;
     z-index: 1;
     p, a {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       color: $base-font-color;
+      text-transform: uppercase;
     }
     p {
       margin: 0;
@@ -30,7 +31,6 @@
     }
     a {
       text-decoration: none;
-      text-transform: uppercase;
     }
   }
 }

@@ -11,34 +11,32 @@ import './style.css';
 
 const PartnersSection = () => (
   <section id="partners">
-    <div className="header">
-      <header>Партнеры</header>
-    </div>
-    <p>Наши заказчики - организации всех отраслей экономики и видов деятельности</p>
+    <header>Партнеры</header>
+    <p><strong>Наши заказчики - организации всех отраслей экономики и видов деятельности</strong></p>
     <div className="grid-container">
       <div className="grid-item-1">
-        <img src={alfabank} />
+        <img src={alfabank} alt='Alfa Bank logo'/>
       </div>
-      <div className="grid-item-2">
+      <div className="grid-item-2"  alt='BelExpo logo'>
         <img src={be} />
       </div>
       <div className="grid-item-3">
-        <img src={renault} />
+        <img src={renault}  alt='Renault logo'/>
       </div>
       <div className="grid-item-4">
-        <img src={kalinka} />
+        <img src={kalinka}  alt='Kalinka logo'/>
       </div>
       <div className="grid-item-5">
-        <img src={gsb} />
+        <img src={gsb}  alt='City Security Systems logo'/>
       </div>
       <div className="grid-item-6">
-        <img src={sek} />
+        <img src={sek}  alt='Judgement Expert Collegium logo'/>
       </div>
       <div className="grid-item-7">
-        <img src={bsb} />
+        <img src={bsb}  alt='BSB Bank logo'/>
       </div>
       <div className="grid-item-8">
-        <img src={akd} />
+        <img src={akd}  alt='Dzierzhinsky logo'/>
       </div>
     </div>
   </section>

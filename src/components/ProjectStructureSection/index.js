@@ -4,10 +4,7 @@ import add from '../../static/media/add.svg';
 
 const ProjectStructureSection = () => (
     <section id="project-structure">
-      <div className="header">
-        <header>Что же входит в проект?</header>
-        <span className="header-underline"></span>
-      </div>
+      <header>Что же входит в проект?</header>
       <ul className="main-project-structure">
         <li>
           <p id="project-structure-item-1" className="project-structure-item">Основной комплект рабочих чертежей внутреннего электрического освещения <span><img src={add}/></span></p>
@@ -18,7 +15,7 @@ const ProjectStructureSection = () => (
               <li>планы расположения электрического оборудования и прокладки электрических сетей</li>
               <li>принципиальные схемы питающей сети</li>
               <li>схемы (таблицы) подключения комплектных распределительный устройств напряжением до 1000В</li>
-              <li>кабельный журнал для питающей сети (при необходимости</li>
+              <li>кабельный журнал для питающей сети (при необходимости)</li>
             </ul>
           </div>
         </li>

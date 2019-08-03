@@ -17,11 +17,12 @@
   }
 
   h1 {
+    padding-bottom: 30px;
     margin-bottom: 30px;
     position: relative;
     &::after {
       background-color: $line-background-color;
-      top: 50px;
+      bottom: 0;
       content: '';
       display: block;
       height: 3px;
