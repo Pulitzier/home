@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button } from "react-bootstrap";
 import "./style.css";
 
 function scrollToView() {
 	const firstSection = document.getElementById("about");
 	firstSection.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-};
+}
 
 let BannerSection = () => (
   <div className="banner-wrapper">
@@ -13,6 +13,7 @@ let BannerSection = () => (
       <h1>Проектирование систем электроснабжения</h1>
       <h2>Грамотно выполненный проект – прочный фундамент для работы надежной системы электрификации объекта</h2>
     </div>
+    <a className="order-project" href="#contact-us">Заказать проект</a>
     <Button className="click-me-down" onClick={scrollToView}>
       <svg className="t-cover__arrow-svg" x="0px" y="0px" viewBox="0 0 38.417 18.592">
         <g>

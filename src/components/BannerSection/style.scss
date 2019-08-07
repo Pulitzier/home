@@ -7,7 +7,9 @@
   max-height: 1980px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+
   &:before {
     content: '';
     filter: brightness(0.6);
@@ -23,7 +25,6 @@
   .banner {
     width: 100%;
     max-width: 1046px;
-    margin: auto;
     padding: 60px 40px;
     display: block;
     position: relative;
@@ -33,6 +34,18 @@
       color: $base-font-color;
     }
     h2 { color: $base-font-color; }
+  }
+
+  a.order-project {
+    color: $submit-font-color;
+    background-color: $submit-back-color;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border: none;
+    display: block;
+    position: relative;
   }
 
   .click-me-down,  .click-me-down:visited {

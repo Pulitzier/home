@@ -1,13 +1,14 @@
 import React from 'react';
 import './style.css';
 
-const NavMenu = (props) => {
+const NavMenu = () => {
 	return (
 		<section className="side-menu" >
       <a href="#about">О Нас</a>
-      <a href="#about">Чем мы занимаемся?</a>
-      <a href="#services">Наши преимущества</a>
-      <a href="#clients">Партнеры</a>
+      <a href="#what-we-do">Чем мы занимаемся?</a>
+      <a href="#portfolio">Наши преимущества</a>
+      <a href="#project-structure">Проект</a>
+      <a href="#partners">Партнеры</a>
       <a href="#contact-us">Контакты</a>
 		</section>
 	)
