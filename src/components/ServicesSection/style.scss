@@ -39,3 +39,16 @@
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  #services {
+    & > div {
+      flex-flow: column wrap;
+    }
+    .self-confident-client-img {
+      width: 335px;
+      margin-right: 0;
+      height: 100%;
+    }
+  }
+}

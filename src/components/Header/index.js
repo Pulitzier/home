@@ -18,8 +18,7 @@ const Header = ({ toggleMenu, activeMobileMenu }) => {
           <span></span>
           <span></span>
         </div>
-        <p>Меню</p>
-      </button>
+1      </button>
     </div>
   </header>
 )};
