@@ -26,8 +26,9 @@ export default class ContactUsSection extends Component {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'text/plain'
-      }
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: payload
     })
       .then(res => console.log(res))
       .catch(e => console.error(e.message));
