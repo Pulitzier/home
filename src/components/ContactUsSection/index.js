@@ -28,7 +28,7 @@ export default class ContactUsSection extends Component {
         Accept: 'application/json',
         'Content-Type': 'text/plain'
       },
-      body: JSON.stringify(payload)
+      body: payload
     })
       .then(res => console.log(res))
       .catch(e => console.error(e.message));
