@@ -20,15 +20,15 @@ export default class ContactUsSection extends Component {
     const payload = {
       email: this.state.reciever,
     };
-    console.dir(payload);
+    // console.dir(payload);
     const API_URL = "https://lk480bz0ef.execute-api.eu-west-1.amazonaws.com/contuct-us/handleSendNotification";
     fetch(API_URL, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'text/plain'
       },
-      body: payload
+      body: JSON.stringify(payload)
     })
       .then(res => console.log(res))
       .catch(e => console.error(e.message));
