@@ -21,7 +21,7 @@ export default class ContactUsSection extends Component {
       email: this.state.reciever,
     };
     console.dir(payload);
-    const API_URL = "https://lk480bz0ef.execute-api.eu-west-1.amazonaws.com/contuct-us";
+    const API_URL = "https://lk480bz0ef.execute-api.eu-west-1.amazonaws.com/contuct-us/handleSendNotification";
     fetch(API_URL, {
       method: 'POST',
       headers: {
