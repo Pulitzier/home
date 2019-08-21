@@ -26,15 +26,22 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: $partnrer-border-color;
+    background-color: $notification-background;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.failure .notification-card {
+      background-color: $notification-failure-card;
+    }
+
+    &.success .notification-card {
+      background-color: $notification-success-card;
+    }
     .notification-card {
       position: relative;
-      background-color: $base-font-color;
       max-width: 450px;
       max-height: 250px;
       width: 100%;
@@ -42,22 +49,24 @@
       padding: 0 70px;
       display: flex;
       align-items: center;
+      border-radius: 10px;
 
       .close-notification {
         position: absolute;
-        top: 16px;
+        top: 10px;
         right: 16px;
         transform: rotate(-45deg);
         color: $submit-font-color;
-        height: 30px;
-        width: 30px;
+        height: 26px;
+        width: 26px;
         padding: 0;
         margin: 0;
         border: 0;
         background: $plus-transparent-background;
+        img { filter: invert(1); }
       }
 
-      p { color: $submit-font-color }
+      p { color: $base-font-color }
     }
   }
 
