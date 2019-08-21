@@ -25,6 +25,7 @@
       margin-bottom: 0;
       padding: 27px 0;
       display: flex;
+      justify-content: space-between;
       &.clicked {
         img {
           transform: rotate(-45deg);
