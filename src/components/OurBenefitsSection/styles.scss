@@ -8,27 +8,37 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
+    justify-content: space-between;
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
     padding: 30px 0;
 
-    img {
-      width: 45px;
-      margin-right: 10px;
-    }
+    .our-benefits-item {
+      display: flex;
+      align-items: center;
+      max-width: 360px;
+      width: 100%;
 
-    .about-item {
-      display: inline-block;
-      font-size: 18px;
-      line-height: 1.35;
-      font-family: 'Roboto',Arial,sans-serif;
-      font-weight: 600;
-      color: #000;
-      text-align: left;
-      &:nth-child(2) {
-        margin-left: 10px;
+      img {
+        width: 45px;
         margin-right: 10px;
+        display: inline-block;
+      }
+
+      .about-item {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1.35;
+        font-family: 'Roboto',Arial,sans-serif;
+        font-weight: 600;
+        color: #000;
+        text-align: left;
+        width: auto;
+        &:nth-child(2) {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
       }
     }
   }
