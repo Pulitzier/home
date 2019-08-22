@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import akd from '../../static/media/akd-small.jpg';
-import be from '../../static/media/be-small.jpg';
-import bsb from '../../static/media/bsb-small.jpg';
-import gsb from '../../static/media/gsb-small.jpg';
+import React from 'react';
+import akd from '../../static/media/akd-small-c.jpg';
+import be from '../../static/media/be-small-c.jpg';
+import bsb from '../../static/media/bsb-small-c.jpg';
+import gsb from '../../static/media/gsb-small-c.jpg';
 import sek from '../../static/media/sek-small.png';
 import alfabank from '../../static/media/alfabank.png';
-import kalinka from '../../static/media/kalinka.jpg';
-import renault from '../../static/media/renault.jpg';
+import kalinka from '../../static/media/kalinka-c.jpg';
+import renault from '../../static/media/renault-c.jpg';
 import './style.css';
 
 const PartnersSection = () => (
@@ -17,8 +17,8 @@ const PartnersSection = () => (
       <div className="grid-item-1">
         <img src={alfabank} alt='Alfa Bank logo'/>
       </div>
-      <div className="grid-item-2"  alt='BelExpo logo'>
-        <img src={be} />
+      <div className="grid-item-2">
+        <img src={be} alt='BelExpo logo' />
       </div>
       <div className="grid-item-3">
         <img src={renault}  alt='Renault logo'/>

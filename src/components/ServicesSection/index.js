@@ -1,8 +1,8 @@
 import React from "react";
 import './style.css';
-import self_client from '../../static/media/219388.jpg';
+import self_client from '../../static/media/219388-c.jpg';
 
-let ServicesSection = (props) => {
+let ServicesSection = () => {
 	return (
 		<section id="services">
       <div>
