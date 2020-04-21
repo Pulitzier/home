@@ -193,7 +193,12 @@
     }
   }
   .brand-header {
-    button { right: 0; }
+    button {
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+    }
   }
   .brand-headline { display: none; }
 }
