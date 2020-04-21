@@ -58,3 +58,11 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #how-we-do-it .description-section-item .description-section-item-text {
+    padding: 0 0 20px 20px;
+    p.item-title { font-size: 18px; }
+    .item-desc { font-size: 16px; }
+  }
+}

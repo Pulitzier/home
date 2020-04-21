@@ -26,14 +26,27 @@
       }
     }
   }
-  div.iamge-container {
+  div.image-container {
     width: 360px;
     height: 270px;
     display: flex;
     justify-content: center;
     overflow: hidden;
   }
-  img {
-    height: 100%;
+  img { height: 100%; }
+}
+
+@media (max-width: 768px) {
+  #what-we-do {
+    .what-we-do-items {
+      div.what-we-do-item {
+        width: 100%;
+        margin: 5px 0;
+        div.image-container {
+          width: 100%;
+          img { width: 100% }
+        }
+      }
+    }
   }
 }

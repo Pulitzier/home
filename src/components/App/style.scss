@@ -1,5 +1,5 @@
 @import "../../static/variables";
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
 p,
 a,
@@ -52,8 +52,20 @@ header:not(.brand-header-wrapper) {
   line-height: 1.23;
   color: $secondary-font-color;
   text-decoration: none;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .banner p { bottom: 10px; }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  h1 { font-size: 30px; }
+  section:not(.side-menu) { padding: 50px 20px; }
+  header:not(.brand-header-wrapper) {
+    margin: 0 auto 40px;
+    font-size: 30px;
+  }
 }

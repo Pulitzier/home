@@ -5,7 +5,6 @@ import ServicesSection from '../ServicesSection/index';
 import ContactUsSection from "../ContactUsSection";
 import PartnersSection from "../PartnersSection";
 import BannerSection from "../BannerSection";
-import NavMenu from "../NavMenu";
 import WhatWeDo from '../WhatWeDoSection';
 import OurBenefits from '../OurBenefitsSection';
 import HowWeDoItSection from '../HowWeDoItSection';
@@ -47,13 +46,8 @@ class App extends Component {
   render() {
     let { activeMobileMenu } = this.state;
     return (
-      <div className={"app " + (activeMobileMenu ? "opened" : "")}>
-				{
-					activeMobileMenu ?
-						<NavMenu /> :
-						null
-				}
-				<div className={activeMobileMenu ? "menu-show" : ""}>
+      <div>
+				<div>
           <Header
             activeMobileMenu={activeMobileMenu}
             toggleMenu={this.toggleMobileMenu}

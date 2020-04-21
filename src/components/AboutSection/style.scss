@@ -49,5 +49,13 @@
 }
 
 @media (max-width: 768px) {
-  #about { flex-flow: column wrap; }
+  #about {
+    flex-flow: column wrap;
+    header {
+      padding-bottom: 40px;
+      &:after {
+        left: 39%;
+      }
+    }
+  }
 }

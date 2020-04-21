@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './static/index.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import { bindEventsListener } from './helpers/functions.js';
+import { bindEventsListener } from './helpers/functions';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
