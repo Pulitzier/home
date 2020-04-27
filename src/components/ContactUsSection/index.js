@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import emailjs from 'emailjs-com';
 import './style.css';
 import add from '../../static/media/add.svg';
 
+const emailService = emailjs.init('user_Urau34ke5gdJYxVY5GhOY');
 const INITIAL_STATE = {
-  reciever: '',
+  userEmail: '',
+  userName: '',
+  comment: '',
   error: false,
   success: false,
   errorObj: {}
@@ -15,36 +19,23 @@ export default class ContactUsSection extends Component {
     this.state = INITIAL_STATE;
   }
 
-  handleTypeReciever = (event) => {
-    let reciever = event.target.value;
-    this.setState({ reciever })
-  };
+  handleTypeName = ({ target: { value = null} }) => this.setState({ userName: value });
+  handleTypeEmail = ({ target: { value = null} }) => this.setState({ userEmail: value });
+  handleTypeComment = ({ target: { value = null} }) => this.setState({ comment: value });
 
   handleSubmit = (event) => {
-    const payload = {
-      "email": this.state.reciever,
-    };
-    const API_URL = "https://lk480bz0ef.execute-api.eu-west-1.amazonaws.com/contuct-us/handleSendNotification";
-
     document.addEventListener('click', this.clearTimeoutAndSetState);
-
-    fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'text/plain'
-      },
-      body: JSON.stringify(payload)
-    })
-      .then(res => {
-        if(res.status == 200) {
-          this.setStateAndTimeout({ reciever: '', success: true })
-        } else {
-          this.setStateAndTimeout({ reciever: '', error: true, errorObj: res })
-        }
-      })
-      .catch(e => this.setStateAndTimeout({ error: true, errorObj: e }));
     event.preventDefault();
+    const templateParams = {
+      from_name: this.state.userName,
+      message_html: this.state.comment,
+    };
+    emailjs.send('mail_ru', 'template_utaLJUEi', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
   };
 
   setStateAndTimeout = (opts) => {
@@ -77,7 +68,7 @@ export default class ContactUsSection extends Component {
   )};
 
   render() {
-    const { reciever: recieverEmail, success, error } = this.state;
+    const { userName, comment, userEmail, success, error } = this.state;
     return (
       <section id="contact-us">
         {
@@ -86,7 +77,9 @@ export default class ContactUsSection extends Component {
         <header>Не можете ввести объект в эксплуатацию?</header>
         <p>Закажите проект прямо сейчас и получите консультацию от наших специалистов!</p>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Ваш email" value={recieverEmail} onChange={this.handleTypeReciever}/>
+          <input type="text" placeholder="Ваше имя" value={userName} onChange={this.handleTypeName}/>
+          <input className="required" type="text" placeholder="Ваш email *(обязательно)" value={userEmail} onChange={this.handleTypeEmail}/>
+          <input type="text" placeholder="Комментарии" value={comment} onChange={this.handleTypeComment}/>
           <button type="submit">Заказать проект</button>
         </form>
       </section>

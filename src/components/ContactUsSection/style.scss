@@ -84,11 +84,18 @@
   }
 
   form {
+    display: flex;
+    flex-flow: column wrap;
     margin-top: 74px;
+    @media (min-width: 769px) {
+      width: 500px;
+    }
     @media (max-width: 768px) {
+      width: 90vw;
       input, button {
         margin: 0 auto;
         display: block;
+        width: 100%;
       }
     }
     input {
@@ -98,8 +105,14 @@
       text-align: center;
       border-radius: 50px;
       padding: 20px 30px;
-      @media (min-width: 769px) {
-        margin-right: 20px;
+      margin: 5px auto;
+      background-color: $trans-base-font-color;
+      width: 100%;
+      &::placeholder {
+        color: $submit-font-color;
+      }
+      &.required::placeholder {
+        color: red;
       }
     }
     button {
@@ -110,6 +123,7 @@
       font-weight: 700;
       padding: 20px 40px;
       border: none;
+      margin-top: 5px;
       @media (max-width: 768px) {
         margin-top: 10px;
       }
