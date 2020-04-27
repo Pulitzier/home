@@ -14,7 +14,7 @@ let BannerSection = () => (
       <h2>Грамотно выполненный проект – прочный фундамент для работы надежной системы электрификации объекта</h2>
     </div>
     <a className="order-project" href="#contact-us">Заказать проект</a>
-    <Button className="click-me-down" onClick={scrollToView}>
+    <Button className="click-me-down" onClick={scrollToView} aria-label="arrow_down">
       <svg className="t-cover__arrow-svg" x="0px" y="0px" viewBox="0 0 38.417 18.592">
         <g>
           <path

@@ -24,7 +24,7 @@ export default class ProjectStructureSection extends Component {
           <header>Что же входит в проект?</header>
           <ul className="main-project-structure">
             <li>
-              <p id="project-structure-item-1" className="project-structure-item">Основной комплект рабочих чертежей внутреннего электрического освещения <span><img src={add}/></span></p>
+              <p id="project-structure-item-1" className="project-structure-item">Основной комплект рабочих чертежей внутреннего электрического освещения <span><img src={add} alt=""/></span></p>
               <div className="desc-item">
                 <p>Включает в себя:</p>
                 <ul>
@@ -37,7 +37,7 @@ export default class ProjectStructureSection extends Component {
               </div>
             </li>
             <li>
-              <p id="project-structure-item-2" className="project-structure-item">Основной комплект рабочих чертежей наружного электроснабжения <span><img src={add}/></span></p>
+              <p id="project-structure-item-2" className="project-structure-item">Основной комплект рабочих чертежей наружного электроснабжения <span><img src={add} alt=""/></span></p>
               <div className="desc-item">
                 <p>Включает в себя:</p>
                 <ul>
@@ -55,7 +55,7 @@ export default class ProjectStructureSection extends Component {
               </div>
             </li>
             <li>
-              <p id="project-structure-item-3" className="project-structure-item">Основной комплект рабочих чертежей раздела молниезащиты <span><img src={add}/></span></p>
+              <p id="project-structure-item-3" className="project-structure-item">Основной комплект рабочих чертежей раздела молниезащиты <span><img src={add} alt=""/></span></p>
               <div className="desc-item">
                 <p>Включает в себя:</p>
                 <ul>
@@ -66,7 +66,7 @@ export default class ProjectStructureSection extends Component {
               </div>
             </li>
             <li>
-              <p id="project-structure-item-4" className="project-structure-item">Основной комплект рабочих чертежей силового электрооборудования <span><img src={add}/></span></p>
+              <p id="project-structure-item-4" className="project-structure-item">Основной комплект рабочих чертежей силового электрооборудования <span><img src={add} alt=""/></span></p>
               <div className="desc-item">
                 <p>Включает в себя:</p>
                 <ul>
