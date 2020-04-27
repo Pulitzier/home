@@ -4,10 +4,12 @@ import './style.css';
 
 export default class Header extends Component {
   bindEventsListener() {
-    let brandHeaderLinks = document.getElementsByClassName("brand-header-link");
-    Array.from(brandHeaderLinks).forEach(
-      item => item.addEventListener('click', () => this.props.toggleMenu())
-    );
+    if (window.innerWidth <= 768) {
+      let brandHeaderLinks = document.getElementsByClassName("brand-header-link");
+      Array.from(brandHeaderLinks).forEach(
+        item => item.addEventListener('click', () => this.props.toggleMenu())
+      );
+    }
   };
 
   componentDidMount() {
