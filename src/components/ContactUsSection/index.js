@@ -23,19 +23,25 @@ export default class ContactUsSection extends Component {
   handleTypeEmail = ({ target: { value = null} }) => this.setState({ userEmail: value });
   handleTypeComment = ({ target: { value = null} }) => this.setState({ comment: value });
 
+  sendEmailOnError = (error) => {
+    emailjs.send('default_service', 'error_email_iuYDJ7', error);
+    this.setStateAndTimeout({ userEmail: '', userName: '', comment: '', error: true, errorObj: error })
+  }
+
   handleSubmit = (event) => {
     document.addEventListener('click', this.clearTimeoutAndSetState);
     event.preventDefault();
     const templateParams = {
-      from_name: this.state.userName,
-      message_html: this.state.comment,
+      userEmail: this.state.userEmail,
+      userName: this.state.userName,
+      comment: this.state.comment,
     };
-    emailjs.send('mail_ru', 'template_utaLJUEi', templateParams)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-        console.log('FAILED...', error);
-      });
+    emailjs.send('default_service', 'template_utaLJUEi', templateParams)
+      .then(
+        response => this.setStateAndTimeout({ userEmail: '', userName: '', comment: '', success: true }),
+        error => this.sendEmailOnError(error)
+      )
+      .catch(this.sendEmailOnError);
   };
 
   setStateAndTimeout = (opts) => {
@@ -78,7 +84,13 @@ export default class ContactUsSection extends Component {
         <p>Закажите проект прямо сейчас и получите консультацию от наших специалистов!</p>
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Ваше имя" value={userName} onChange={this.handleTypeName}/>
-          <input className="required" type="text" placeholder="Ваш email *(обязательно)" value={userEmail} onChange={this.handleTypeEmail}/>
+          <input
+            className="required"
+            type="text"
+            placeholder="Ваш email *(обязательно)"
+            value={userEmail}
+            onChange={this.handleTypeEmail}
+          />
           <input type="text" placeholder="Комментарии" value={comment} onChange={this.handleTypeComment}/>
           <button type="submit">Заказать проект</button>
         </form>
