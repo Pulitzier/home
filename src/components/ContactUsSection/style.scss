@@ -124,6 +124,9 @@
       padding: 20px 40px;
       border: none;
       margin-top: 5px;
+      &:disabled {
+        background-color: rgba(255, 240, 31, 0.5);
+      }
       @media (max-width: 768px) {
         margin-top: 10px;
       }

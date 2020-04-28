@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   comment: '',
   error: false,
   success: false,
+  submitDisabled: true,
   errorObj: {}
 };
 
@@ -20,8 +21,13 @@ export default class ContactUsSection extends Component {
   }
 
   handleTypeName = ({ target: { value = null} }) => this.setState({ userName: value });
-  handleTypeEmail = ({ target: { value = null} }) => this.setState({ userEmail: value });
   handleTypeComment = ({ target: { value = null} }) => this.setState({ comment: value });
+  handleTypeEmail = ({ target: { value = null} }) => {
+    let submitDisabled = true;
+    const trueEmail = value.match('(.*)@(.*)\.');
+    if (trueEmail && trueEmail.length) submitDisabled = false;
+    this.setState({ userEmail: value, submitDisabled });
+  }
 
   sendEmailOnError = (error) => {
     emailjs.send('default_service', 'error_email_iuYDJ7', error);
@@ -74,7 +80,7 @@ export default class ContactUsSection extends Component {
   )};
 
   render() {
-    const { userName, comment, userEmail, success, error } = this.state;
+    const { userName, comment, userEmail, success, error, submitDisabled } = this.state;
     return (
       <section id="contact-us">
         {
@@ -92,7 +98,7 @@ export default class ContactUsSection extends Component {
             onChange={this.handleTypeEmail}
           />
           <input type="text" placeholder="Комментарии" value={comment} onChange={this.handleTypeComment}/>
-          <button type="submit">Заказать проект</button>
+          <button type="submit" disabled={submitDisabled}>Заказать проект</button>
         </form>
       </section>
     )
